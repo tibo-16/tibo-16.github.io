@@ -1,1 +1,0 @@
-<iframe src="app/index.html"></iframe>
