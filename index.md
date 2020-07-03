@@ -1,11 +1,11 @@
 # _Android_
 ---
-### 2.0.0
-**[Download](https://dl.dropboxusercontent.com/s/ycxgoi7qboejhle/app-release-2.0.0.apk)**
+### 2.0.1
+**[Download](https://dl.dropboxusercontent.com/s/k6lstji6cilqk1f/app-release-2.0.1.apk)**
 
 # _Web_
 ---
-### 2.0.1 (altes Design)
+### altes Design
 **[Starten](https://tibo-16.github.io/app)**
 
 > **Beachte:**  
