@@ -1,7 +1,7 @@
 # _Android_
 ---
 ### 2.0.2
-**[Download](https://dl.dropboxusercontent.com/s/vb4u3u7srzmlr4o/app-release-2.0.2.apk)**
+**[Download](https://dl.dropboxusercontent.com/s/29p6aayplw6o5jr/app-release-2.0.2.apk)**
 
 # _Web_
 ---
