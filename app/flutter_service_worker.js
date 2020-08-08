@@ -3,15 +3,15 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "index.html": "21b518872deb0b5ee50c75618ac92e62",
-"/": "21b518872deb0b5ee50c75618ac92e62",
-"main.dart.js": "ed25ab8ebe0b59eabee08bd26e064bfd",
+  "index.html": "787184d762c66092f42f7716733e9cdb",
+"/": "787184d762c66092f42f7716733e9cdb",
+"main.dart.js": "7076b819cbdd8c1a19f5f095a96a43b0",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "ab0feb1bf262d3dd288c0875b098a499",
 "assets/AssetManifest.json": "7949bfb9707be79d8d0a1c6d38dfd2d6",
-"assets/NOTICES": "b7c4ed70d7fa61e45a872d12bc38376a",
+"assets/NOTICES": "d52e67664df0ba81d49f92bd407322a0",
 "assets/FontManifest.json": "dad62fcffed281e503f0af7a49290a4a",
 "assets/fonts/ActionIcons.ttf": "b6328677cdee8c1e240264a6577bdb55",
 "assets/fonts/Bitter-Bold.otf": "b5835171281391e5eb9a446ce58975ba",
@@ -31,7 +31,7 @@ const CORE = [
   "/",
 "main.dart.js",
 "index.html",
-"assets/LICENSE",
+"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 
@@ -113,7 +113,7 @@ self.addEventListener("fetch", (event) => {
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#')) {
     key = '/';
   }
-  // If the URL is not the the RESOURCE list, skip the cache.
+  // If the URL is not the RESOURCE list, skip the cache.
   if (!RESOURCES[key]) {
     return event.respondWith(fetch(event.request));
   }
@@ -136,11 +136,11 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
-  if (event.message == 'skipWaiting') {
+  if (event.data === 'skipWaiting') {
     return self.skipWaiting();
   }
 
-  if (event.message = 'downloadOffline') {
+  if (event.message === 'downloadOffline') {
     downloadOffline();
   }
 });
@@ -160,8 +160,8 @@ async function downloadOffline() {
   }
   for (var resourceKey in Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
-      resources.add(resourceKey);
+      resources.push(resourceKey);
     }
   }
-  return Cache.addAll(resources);
+  return contentCache.addAll(resources);
 }
