@@ -3,15 +3,15 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "index.html": "787184d762c66092f42f7716733e9cdb",
-"/": "787184d762c66092f42f7716733e9cdb",
-"main.dart.js": "7076b819cbdd8c1a19f5f095a96a43b0",
+  "index.html": "2c8459b25c93f146082db9be00847ef8",
+"/": "2c8459b25c93f146082db9be00847ef8",
+"main.dart.js": "33b4a64717055ba66ec8549a2b340e6e",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "ab0feb1bf262d3dd288c0875b098a499",
 "assets/AssetManifest.json": "7949bfb9707be79d8d0a1c6d38dfd2d6",
-"assets/NOTICES": "d52e67664df0ba81d49f92bd407322a0",
+"assets/NOTICES": "589846cf07d9ccc9823f33b1b7e94248",
 "assets/FontManifest.json": "dad62fcffed281e503f0af7a49290a4a",
 "assets/fonts/ActionIcons.ttf": "b6328677cdee8c1e240264a6577bdb55",
 "assets/fonts/Bitter-Bold.otf": "b5835171281391e5eb9a446ce58975ba",
